@@ -3,26 +3,101 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    border: 1px solid red;
 }
 
 body {
     font-family: 'Montserrat', sans-serif;
 }
 
+.flex {
+    display: flex;
+}
+
 /*SOLUZIONE XS RESPONSIVE*/
+
+.container-up-header span {
+    color: white;
+    text-transform: uppercase;
+}
 
 header {
     width: 10%;
-    height: 1000px;
     position: fixed;
-    background-color: red;
-    
+    background-color: rgb(0, 0, 0);
+    flex-direction: column;
+    justify-content: space-between;
 }
+
+#logo {
+    display: none;
+    width: 9rem;
+    padding: 1rem;
+}
+
+#logo-small {
+    height: 2rem;
+    margin-top: 0.5rem;
+}
+
+.container-up-header {
+    margin-bottom: 10rem;
+}
+
+.features {
+    flex-direction: column;
+    color: white;
+}
+
+.features img {
+    height: 2rem;
+}
+
+.features span {
+    display: none;
+}
+
+.playlist {
+    display: none;
+}
+
+.install-app {
+    color: rgb(119, 119, 119);
+}
+
+.install-app img,
+.profile img {
+    width: 2rem;
+}
+
+.install-app span,
+.profile span {
+    display: none;
+}
+
+
+
+
+
 
 .cta {
     width: 100%;
-    height: 100px;
-    background-color: yellow;
+    background-color: rgb(8, 11, 18);
+    justify-content: end;
+}
+
+.cta span {
+    color: white;
+    text-transform: uppercase;
+    border: 2px solid white;
+    height: fit-content;
+    border-radius: 3rem;
+    font-size: 0.7rem;
+    padding: 0.7rem 2rem;
+    font-weight: 600;
+    margin-top: 1rem;
+    margin-right: 0.5rem;
+    margin-bottom: 2rem;
 }
 
 main {
@@ -31,13 +106,72 @@ main {
     width: 100vw;
     height: 500px;
     left: 10%;
+    overflow: auto;
 }
 
 .taskbar {
     width: 100%;
-    height: 50px;
+    height: 105;
     background-color: blueviolet;
     position: fixed;
     bottom: 0;
 }
+
+.cover-playing img {
+    height: 2rem;
+}
+
+/*SOLUZIONE S RESPONSIVE*/
+
+@media screen and (min-width: 576px) {
+
+    header {
+        width: 35%;
+    }
+
+    #logo-small {
+        display: none;
+    }
+
+    #logo {
+        display: inline;
+    }
+
+    .features {
+        flex-direction: row;
+    }
+
+    .features span {
+        display: inline;
+    }
+    
+    .playlist {
+        display: inline-flex;
+        flex-direction: column;
+    }
+
+    .install-app {
+        border-bottom: 1px solid rgb(119, 119, 119);
+    }
+
+    .install-app span {
+        display: inline;
+    }
+
+    .profile {
+        color: white;
+    }
+
+    .profile span {
+        display: inline;
+    }
+
+    
+
+    main {
+        left: 35%;
+    }
+}
+
+
 
