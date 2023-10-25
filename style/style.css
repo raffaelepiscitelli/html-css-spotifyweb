@@ -14,21 +14,26 @@ body {
     display: flex;
 }
 
-/*SOLUZIONE XS RESPONSIVE*/
-
-.container-up-header span {
-    color: white;
-}
-
 .wrapper {
     flex-wrap: wrap;
 }
+
+/*SOLUZIONE XS RESPONSIVE*/
+
+/*HEADER*/
 
 header {
     width: 40px;
     background-color: rgb(0, 0, 0);
     flex-direction: column;
     justify-content: space-between;
+    height: calc(100vh - 70px);
+}
+
+/*CONTAINER-UP-HEADER*/
+
+.container-up-header span {
+    color: white;
 }
 
 #logo {
@@ -43,35 +48,50 @@ header {
     width: 100%;
 }
 
-.container-up-header {
-    margin-bottom: 10rem;
-}
+/*FEATURES*/
 
 .features {
     flex-direction: column;
     color: white;
+    margin-top: 0.5rem;
 }
 
 .features img {
     height: 1.5rem;
-    margin-top: 0.5rem;
 }
 
 .features span {
     display: none;
 }
 
+/*PLAYLIST*/
+
 .playlist {
     display: none;
 }
+
+/*CONTAINER-BOTTOM-HEADER*/
 
 .container-bottom-header {
     flex-direction: column;
     align-items: center;
 }
 
+/*INSTALL-APP*/
+
 .install-app img {
     height: 0.9rem;
+}
+
+.install-app span {
+    display: none;
+}
+
+/*PROFILE*/
+
+.profile {
+    margin: 0.5rem 0;
+    align-items: center;
 }
 
 .profile img {
@@ -79,19 +99,20 @@ header {
     height: 1.2rem;
     width: 1.2rem;
     border-radius: 50%;
-    margin-top: 1rem;
-    margin-bottom: 0.3rem;
 }
 
-.install-app span,
 .profile span {
     display: none;
 }
 
+/*MAIN*/
 
-
-
-
+main {
+    background-color: blue;
+    width: calc(100vw - 40px);
+    height: calc(100vh - 70px);
+    overflow: auto;
+}
 
 .cta {
     width: 100%;
@@ -113,12 +134,7 @@ header {
     margin-bottom: 2rem;
 }
 
-main {
-    background-color: blue;
-    width: calc(100vw - 40px);
-    height: calc(100vh - 70px);
-    overflow: auto;
-}
+/*TASKBAR*/
 
 .taskbar {
     width: 100%;
@@ -126,13 +142,98 @@ main {
     background-color: rgb(40, 40, 40);
 }
 
-.cover-playing img {
+/*CONTAINER-LEFT-TASKBAR*/
+
+.container-left-taskbar {
+    align-items: center;
+    width: calc(100% / 3);
+}
+
+/*NOW-PLAYING*/
+
+.now-playing {
+    width: 100%;
+    justify-content: space-around;
+}
+
+.song {
+    align-items: center;
+}
+
+.now-playing img {
     height: 2rem;
 }
 
-/*SOLUZIONE S RESPONSIVE*/
+/*SONG-INFO*/
+
+.song-info {
+    flex-direction: column;
+    justify-content: center;
+    padding-left: 0.5rem;
+}
+
+.song-info span:first-child {
+    color: white;
+    font-size: 0.6rem;
+    font-weight: 700;
+}
+
+.song-info span:last-child {
+    color: rgb(122, 122, 122);
+    font-size: 0.5rem;
+    font-weight: 700;
+}
+
+/*ACTION SONG*/
+
+.action-song {
+    flex-direction: column;
+    font-size: 0.7rem;
+    justify-content: center;
+}
+
+/*CONTAINER-CENTRAL-TASKBAR*/
+
+.container-central-taskbar {
+    width: calc(100% / 3);
+    align-items: center;
+    justify-content: center;
+}
+
+/*MUSIC-CONTROL-BAR*/
+
+.music-control-bar {
+    width: 150px;
+    justify-content: space-between;
+}
+
+/*CONTAINER-RIGHT-TASKBAR*/
+
+.container-right-taskbar {
+    width: calc(100% / 3);
+    align-items: center;
+    position: relative;
+}
+
+/*RIGHT-CONTROL*/
+
+.right-control {
+    width: 100%;
+    justify-content: space-around;
+}
+
+
+
+
+
+
+
+
+/*****SOLUZIONE S RESPONSIVE*****/
 
 @media screen and (min-width: 576px) {
+
+    /*HEADER*/
 
     header {
         width: 200px;
@@ -140,7 +241,7 @@ main {
         padding-left: 1rem;
     }
 
-    
+    /*CONTAINER-UP-HEADER*/
 
     #logo-small {
         display: none;
@@ -148,7 +249,10 @@ main {
 
     #logo {
         display: inline;
+        padding-left: 0.2rem;
     }
+
+    /*FEATURES*/
 
     .features {
         flex-direction: row;
@@ -159,6 +263,8 @@ main {
         display: inline;
         font-size: 0.7rem;
     }
+
+    /*PLAYLIST*/
     
     .playlist {
         display: inline-flex;
@@ -170,12 +276,19 @@ main {
         font-size: 0.7rem;
         color: rgb(122, 122, 122);
         margin-bottom: 0.5rem;
-
     }
 
     .create-playlists {
         margin-bottom: 0.5rem;
     }
+
+    /*CONTAINER-BOTTOM-HEADER*/
+
+    .container-bottom-header {
+        align-items: flex-start;
+    }
+
+    /*INSTALL*/
 
     .install-app {
         border-bottom: 1px solid rgb(119, 119, 119);
@@ -183,21 +296,36 @@ main {
 
     .install-app span {
         display: inline;
+        color: rgb(119, 119, 119);
+        font-size: 0.7rem;
+        vertical-align: top;
     }
+
+    /*PROFILE*/
 
     .profile {
         color: white;
+        align-items: center;
     }
 
     .profile span {
         display: inline;
+        font-size: 0.8rem;
+        padding-left: 0.5rem;
     }
 
-    
+    /*MAIN*/
 
     main {
-        background-color: blue;
         width: calc(100vw - 200px);
+    }
+
+    /*TASKBAR*/
+
+    .taskbar {
+    width: 100%;
+    height: 70px;
+    background-color: rgb(40, 40, 40);
     }
 }
 
