@@ -136,9 +136,50 @@ main {
 
 /*GENRES*/
 
-.genres span {
+.genres {
+    justify-content: center;
+}
+
+.container-genres {
+    list-style: none;
+    color: rgb(117, 120, 125);
+    text-transform: uppercase;
+    font-weight: 600;
+    font-size: 0.81rem;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.container-genres li {
+    margin: 0.5rem;
+}
+
+/*CONTAINER-RECENTLY-PLAYED*/
+
+.container-recently-played {
+    margin: 1rem;
+}
+
+h1 {
+    color: white;
+    font-weight: 700;
+    font-size: 1.3rem;
+}
+
+.card {
+    flex-direction: column;
+    height: 7.5rem;
+    width: 7.5rem;
     text-align: center;
 }
+
+h2 {
+    color: white;
+    font-weight: 700;
+    font-size: 0.8rem;
+}
+
+
 
 /*TASKBAR*/
 
