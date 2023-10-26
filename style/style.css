@@ -64,10 +64,22 @@ header {
     color: rgb(150, 150, 150);
 }
 
+.features span:hover {
+    color: white;
+}
+
 /*PLAYLIST*/
 
 .playlist {
     display: none;
+}
+
+.playlist span:first-child {
+    text-transform: uppercase;
+}
+
+.playlist span:hover {
+    color: white;
 }
 
 /*CONTAINER-BOTTOM-HEADER*/
@@ -154,25 +166,46 @@ main {
     margin: 0.5rem;
 }
 
-/*CONTAINER-RECENTLY-PLAYED*/
+/*CONTAINER-SECTION-MAIN*/
 
-.container-recently-played {
-    margin: 1rem;
+.container-section-main {
     flex-wrap: wrap;
-    width: 90%;
+    width: 100%;
+    padding: 1rem;
 }
 
 h1 {
     color: white;
     font-weight: 700;
     font-size: 1.3rem;
+    padding-left: 1.5rem
+}
+
+.section-main span {
+    color: rgb(110, 112, 117);
+    font-size: ;
 }
 
 .card {
     flex-direction: column;
     text-align: center;
     margin-top: 0.5rem;
+    width: calc(100% / 2);
+    padding: 0.5rem;
 }
+
+.card {
+    padding-bottom: 0.5rem;
+    position: relative;
+}
+
+.play-button {
+    position: absolute;
+    font-size: 100%;
+    left: 0;
+}
+
+
 
 h2 {
     color: white;
@@ -180,20 +213,27 @@ h2 {
     font-size: 0.8rem;
 }
 
-
-.container-recently-played img,
-.container-recently-played h2 {
+.container-section-main img,
+.container-section-main h2 {
     margin-bottom: 0.3rem;
 }
 
-
-.container-recently-played span {
+.container-section-main span {
     color: rgb(128, 130, 134);
     font-size: 0.7rem;
     font-weight: 600;
 }
 
+.most-popular-artists span,
+.suggested-playlist span {
+    padding-left: 1.4rem;
+    font-size: 0.7rem;
+    font-weight: 600;
+}
 
+.circle-img {
+    border-radius: 50%;
+}
 
 /*TASKBAR*/
 
@@ -282,13 +322,6 @@ h2 {
     width: 100%;
     justify-content: space-around;
 }
-
-
-
-
-
-
-
 
 /*****SOLUZIONE S RESPONSIVE*****/
 
@@ -390,5 +423,20 @@ h2 {
     }
 }
 
+/*****SOLUZIONE MD RESPONSIVE*****/
+
+@media screen and (min-width: 768px) {
+    .card {
+        width: calc(100% / 4);
+    }
+}
+
+/*****SOLUZIONE LD RESPONSIVE*****/
+
+@media screen and (min-width: 992px) {
+    .card {
+        width: calc(100% / 6);
+    }
+}
 
 
