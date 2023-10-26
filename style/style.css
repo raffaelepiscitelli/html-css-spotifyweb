@@ -52,7 +52,6 @@ header {
 
 .features {
     flex-direction: column;
-    color: white;
     margin-top: 0.5rem;
 }
 
@@ -62,6 +61,7 @@ header {
 
 .features span {
     display: none;
+    color: rgb(150, 150, 150);
 }
 
 /*PLAYLIST*/
@@ -158,6 +158,8 @@ main {
 
 .container-recently-played {
     margin: 1rem;
+    flex-wrap: wrap;
+    width: 90%;
 }
 
 h1 {
@@ -168,15 +170,27 @@ h1 {
 
 .card {
     flex-direction: column;
-    height: 7.5rem;
-    width: 7.5rem;
     text-align: center;
+    margin-top: 0.5rem;
 }
 
 h2 {
     color: white;
     font-weight: 700;
     font-size: 0.8rem;
+}
+
+
+.container-recently-played img,
+.container-recently-played h2 {
+    margin-bottom: 0.3rem;
+}
+
+
+.container-recently-played span {
+    color: rgb(128, 130, 134);
+    font-size: 0.7rem;
+    font-weight: 600;
 }
 
 
